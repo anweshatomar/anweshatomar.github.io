@@ -1,560 +1,69 @@
-<!DOCTYPE HTML>
-<!--
-	Photon by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Anwesha Tomar</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Julia Huang AI Artist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
+  <!-- Header Section -->
+  <header class="flex justify-between items-center py-6 px-10 bg-gray-100 shadow-md">
+    <div class="text-lg font-semibold">JULIA HUANG</div>
+    <nav class="space-x-6">
+      <a href="#projects" class="text-gray-700 hover:text-gray-900">Projects</a>
+      <a href="#about" class="text-gray-700 hover:text-gray-900">About</a>
+      <a href="#contact" class="text-gray-700 hover:text-gray-900">Contact</a>
+    </nav>
+  </header>
 
-		<!-- Header -->
-			<section id="header">
-				<div class="inner">
-					<span class="icon solid major fa-code"></span>
-					<h1>Welcome to my<strong> Digital Resume</strong>. <br>This is a collection of my<br />
-					Data Science projects and Data Engineering practice.</h1>
-					<p>I am a recent graduate from The George Washington University<br>
-						with a Master's of Science in Data Science. 
-					</p>
-					<ul class="actions special">
-						<li><a href="#one" class="button scrolly">See More</a></li>
-					</ul>
-				</div>
-			</section>
+  <!-- Main Section -->
+  <section class="text-center py-20 bg-gray-50">
+    <h1 class="text-4xl font-bold text-gray-900">Artist Redefining Architecture with AI-Driven Design</h1>
+  </section>
 
-		<!-- One -->
-			<section id="one" class="main style1">
-				<div class="container">
-					<div class="row gtr-150">
-						<div class="col-6 col-12-medium">
-							<header class="major">
-								<h2>Anwesha Tomar</h2>
-							</header>
-							<p><br><br><br><br>I am a Data Scientist who enjoys looking for data-driven solutions and is passionate about implementing machine learning and deep learning to create solutions that are pragmatic and easy to interpret. I have a strong technical background that enables me to learn technologies on the fly. 
-								<br><br><br>
-								As a part of my curriculum, I have collaborated on several projects and worked on healthcare, financial and environmental data, and presented results to technical and non-technical audiences.
-								</p>
-						</div>
-						<div class="col-6 col-12-medium imp-medium">
-							<span class="image fit"><img src="images/pic01.jpeg" alt="" /></span>
-						</div>
-					</div>
-				</div>
-			</section>
+  <!-- About Section -->
+  <section id="about" class="py-16 px-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <p class="text-lg text-gray-600">
+        Julia Huang is an innovative AI artist, renowned for blending cutting-edge technology with creative expression. Based in LA, she crafts unique digital art experiences accessible globally.
+      </p>
+    </div>
+  </section>
 
-		
+  <!-- Projects Section -->
+  <section id="projects" class="py-16 bg-gray-100">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-8 text-gray-900">Featured Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="p-6 bg-white shadow-md rounded-md">
+          <h3 class="text-xl font-semibold text-gray-900">Zephyr</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-md">
+          <h3 class="text-xl font-semibold text-gray-900">Verve</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-md">
+          <h3 class="text-xl font-semibold text-gray-900">Elara</h3>
+        </div>
+        <div class="p-6 bg-white shadow-md rounded-md">
+          <h3 class="text-xl font-semibold text-gray-900">Musea</h3>
+        </div>
+      </div>
+    </div>
+  </section>
 
-		<!-- Two -->
-			<section id="three" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Data Science and Machine Learning</h2>
-					</header>
-					<div class="row gtr-150">
-						<div class="col-4 col-12-medium">
-							<span class="myimg"><img src="images/newkiva.jpg" alt="" /></span>
-							<h3>Predictions on Kiva Crowdfunding Loan Dataset</h3>
-							<p>Implemented muliple models to predict the loan amount (regression) and the repayment interval type (classification) and multitarget prediction(repayment_interval, activities).<br><br></p>
-							<ul class="actions special">
-								<li><a href="https://github.com/anweshatomar/Predictions-on-Kiva-Crowdfunding-Loan-Dataset" class="button">Github</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/newwind.jpg" alt="" /></span>
-							<h3>Wind Turbine Electricity Prediction</h3>
-							<p>Implemenetd time series models such as SES, Holt Winter models, ARMA and SARIMA to calculate the rate at which the customers should be charged.&emsp;&emsp;&emsp;
-							<br><br>
-							</p>
-							<ul class="actions special">
-								<li><a href="https://github.com/anweshatomar/Wind-Turbine-Electricity-Prediction" class="button">Github</a></li>
-							</ul>
-						</div>
-						<div class="col-4 col-12-medium">
-							<span class="myimg"><img src="images/viki.png" alt="" /></span>
-							<h3>Anime Recommender System</h3>
-							<p>Developed an anime recommendation system to generate recommendations specific to user preferences by implemented collaborative filtering and content based filtering.
-								<br><br></p>
-							<ul class="actions special">
-								<li><a href="https://github.com/anweshatomar/Anime-Recommender-System" class="button">Github</a></li>
-							</ul>
-						</div>
-						<div style="margin:0 auto;" class="col-4 col-12-medium">
-							<span class="image fit"><img src="images/newcardio.jpg" alt="" /></span>
-							<h3>Cardiovascular Disease Analysis</h3>
-							<p>Analyzed WHO MONICA(Multinational Monitoring of Trends and Determinants in Cardiovascular Disease) dataset to find demographic and physiological indicators associated with the outcome of mortality from cardiovascular disease.</p>
-							<ul class="actions special">
-								<li><a href="https://github.com/anweshatomar/Cardiovascular-Disease-Analysis" class="button">Github</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
+  <!-- Contact Section -->
+  <section id="contact" class="py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-semibold mb-8 text-gray-900">Have some questions?</h2>
+      <p class="text-lg text-gray-600 mb-6">Feel free to reach out via social media or contact form.</p>
+      <div class="space-x-4">
+        <a href="https://instagram.com" class="text-gray-700 hover:text-gray-900">Instagram</a>
+        <a href="https://twitter.com" class="text-gray-700 hover:text-gray-900">Twitter</a>
+        <a href="https://linkedin.com" class="text-gray-700 hover:text-gray-900">LinkedIn</a>
+      </div>
+    </div>
+  </section>
 
-		<!-- Three -->
-		<section id="three" class="main style1 special">
-			<div class="container">
-				<header class="major">
-					<h2>Natural Language Processing</h2>
-				</header>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/nlp.jpg" alt="" /></span>
-						<h3>Automatic Job Description Terminology Analysis</h3>
-						<p>Analysis of data science and software engineering job descriptions using NLP tools to find the most relevant skills in data science.The data was collected using web-scraping.  </p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Automatic-Job-Description-Terminology-Analysis" class="button">Github</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="myimg"><img src="images/newasr.png" alt="" /></span>
-						<h3>Automatic Speech Recognition</h3>
-						<p>Implemented Google Speech to Text API and Mozilla Deepspeech 2.0 in order to transcribe text from speech(Non native English speakers).    
-						<br><br></p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Automatic-Speech-Recognition" class="button">Github</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="myimg"><img src="images/newnner.png" alt="" /></span>
-						<h3>Entity Comparison</h3>
-						<p>Extracted entities from both corpus, and then compare the two and see which entities are correctly classified.<br><br><br></p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Entity-Comparison" class="button">Github</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-
-		<!-- Four -->
-		<section id="four" class="main style1 special">
-			<div class="container">
-				<header class="major">
-					<h2>Deep Learning</h2>
-				</header>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/cc3.jpg" alt="" /></span>
-						<h3>Crowd Counting</h3>
-						<p>Built a CNN and Resnet 50 model to count the number of people in a picture to help avoid overcrowding and mishaps in
-							public places. Achieved an error of less than 5 percent.<br></p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Crowd-Counting" class="button">Github</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/cnn1.png" alt="" /></span>
-						<h3>Multi-label Classification of Cells using CNN</h3>
-						<p>Built a CNN model to identify the seven different data cells,
-							namely: "red blood cell", "difficult", "gametocyte", "trophozoite", "ring", "schizont", "leukocyte".
-							Achieved a loss of 10.31149292 loss.
-							</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Multilabel-Classification-of-7-Different-Cells" class="button">Github</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/mlp2.png" alt="" /></span>
-						<h3>Malaria Cell Classification using MLP</h3>
-						<p>Coded a Multilayer perceptron(MLP) to classify 4 different cells, that are: “red blood
-							cell”, “ring”, “schizont” and “trophozoite”. Achieved an average
-							score of 7.55747E-01.
-							</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Malaria-Cell-Classification-Using-MLP" class="button">Github</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<!-- Five -->
-		<section id="five" class="main style1 special">
-			<div class="container">
-				<header class="major">
-					<h2>Data Engineering and Work Experience </h2>
-				</header>
-				<div class="row gtr-150">
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/de.jpg" alt="" /></span>
-						<h3>Data Engineering Repository Collections</h3>
-						<p>A collection of Data Engineering practices. SQL and Python practice repos.<br><br><br><br><br></p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/SQL-Practice" class="button">SQL</a></li>
-							<li><a href="https://github.com/anweshatomar/Python-Practice" class="button">Python</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="image fit"><img src="images/fdc.jpg" alt="" /></span>
-						<h3>Fresh Air DC</h3>
-						<p>
-							Fresh Air DC is a research project using low-cost uRAD monitors to establish an air quality monitoring network. I was tasked with coding a corrective function that  ensures that the data collected aligns with the Environmental Protection Agency’s Federal Regulatory Equipment.
-							
-							<br><br></p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Fresh-Air-DC" class="button">Github</a></li>
-							<li><a href="https://ieeexplore.ieee.org/document/9106580" class="button">Paper</a></li>
-						</ul>
-					</div>
-					<div class="col-4 col-12-medium">
-						<span class="myimg"><img src="images/gwu.png" alt="" /></span>
-						<h3>Graduate Teaching Assistant</h3>
-						<p>Leveraged python proficiency to guide students through data mining projects and assignments. Designed tutorials and leveraged communication skills to successfully deliver them.
-							</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/anweshatomar/Data-Mining-Assignments" class="button">Github</a></li>
-						</ul>
-					</div>	
-			</section>
-
-	
-		
-		<!-- Five -->
-		<!--
-			<section id="five" class="main style1">
-				<div class="container">
-					<header class="major special">
-						<h2>Elements</h2>
-					</header>
-
-					<section>
-						<h4>Text</h4>
-						<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-						This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-						This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-						<hr />
-						<header>
-							<h4>Heading with a Subtitle</h4>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<header>
-							<h5>Heading with a Subtitle</h5>
-							<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-						</header>
-						<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-						<hr />
-						<h2>Heading Level 2</h2>
-						<h3>Heading Level 3</h3>
-						<h4>Heading Level 4</h4>
-						<h5>Heading Level 5</h5>
-						<h6>Heading Level 6</h6>
-						<hr />
-						<h5>Blockquote</h5>
-						<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-						<h5>Preformatted</h5>
-						<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-print 'Iteration ' + i;
-deck.shuffle();
-i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-					</section>
-
-					<section>
-						<h4>Lists</h4>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<h5>Unordered</h5>
-								<ul>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-								<h5>Alternate</h5>
-								<ul class="alt">
-									<li>Dolor pulvinar etiam.</li>
-									<li>Sagittis adipiscing.</li>
-									<li>Felis enim feugiat.</li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<h5>Ordered</h5>
-								<ol>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis viverra.</li>
-									<li>Felis enim feugiat.</li>
-									<li>Dolor pulvinar etiam.</li>
-									<li>Etiam vel felis lorem.</li>
-									<li>Felis enim et feugiat.</li>
-								</ol>
-								<h5>Icons</h5>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								</ul>
-							</div>
-						</div>
-						<h5>Actions</h5>
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<ul class="actions">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions small">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary">Default</a></li>
-									<li><a href="#" class="button">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small">Small</a></li>
-									<li><a href="#" class="button small">Small</a></li>
-								</ul>
-							</div>
-							<div class="col-6 col-12-medium">
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary fit">Default</a></li>
-									<li><a href="#" class="button fit">Default</a></li>
-								</ul>
-								<ul class="actions stacked">
-									<li><a href="#" class="button primary small fit">Small</a></li>
-									<li><a href="#" class="button small fit">Small</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-					<section>
-						<h4>Table</h4>
-						<h5>Default</h5>
-						<div class="table-wrapper">
-							<table>
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-
-						<h5>Alternate</h5>
-						<div class="table-wrapper">
-							<table class="alt">
-								<thead>
-									<tr>
-										<th>Name</th>
-										<th>Description</th>
-										<th>Price</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Item One</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Two</td>
-										<td>Vis ac commodo adipiscing arcu aliquet.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Three</td>
-										<td> Morbi faucibus arcu accumsan lorem.</td>
-										<td>29.99</td>
-									</tr>
-									<tr>
-										<td>Item Four</td>
-										<td>Vitae integer tempus condimentum.</td>
-										<td>19.99</td>
-									</tr>
-									<tr>
-										<td>Item Five</td>
-										<td>Ante turpis integer aliquet porttitor.</td>
-										<td>29.99</td>
-									</tr>
-								</tbody>
-								<tfoot>
-									<tr>
-										<td colspan="2"></td>
-										<td>100.00</td>
-									</tr>
-								</tfoot>
-							</table>
-						</div>
-					</section>
-
-					<section>
-						<h4>Buttons</h4>
-						<ul class="actions">
-							<li><a href="#" class="button primary">Primary</a></li>
-							<li><a href="#" class="button">Default</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button large">Large</a></li>
-							<li><a href="#" class="button">Default</a></li>
-							<li><a href="#" class="button small">Small</a></li>
-						</ul>
-						<ul class="actions fit">
-							<li><a href="#" class="button fit">Fit</a></li>
-							<li><a href="#" class="button primary fit">Fit</a></li>
-							<li><a href="#" class="button fit">Fit</a></li>
-						</ul>
-						<ul class="actions fit small">
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-							<li><a href="#" class="button fit small">Fit + Small</a></li>
-							<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-						</ul>
-						<ul class="actions">
-							<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-							<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-						</ul>
-						<ul class="actions">
-							<li><span class="button primary disabled">Disabled</span></li>
-							<li><span class="button disabled">Disabled</span></li>
-						</ul>
-					</section>
-
-					<section>
-						<h4>Form</h4>
-						<form method="post" action="#">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-6 col-12-xsmall">
-									<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-								</div>
-								<div class="col-12">
-									<select name="demo-category" id="demo-category">
-										<option value="">- Category -</option>
-										<option value="1">Manufacturing</option>
-										<option value="1">Shipping</option>
-										<option value="1">Administration</option>
-										<option value="1">Human Resources</option>
-									</select>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-									<label for="demo-priority-low">Low</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-normal" name="demo-priority">
-									<label for="demo-priority-normal">Normal</label>
-								</div>
-								<div class="col-4 col-12-small">
-									<input type="radio" id="demo-priority-high" name="demo-priority">
-									<label for="demo-priority-high">High</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-copy" name="demo-copy">
-									<label for="demo-copy">Email me a copy</label>
-								</div>
-								<div class="col-6 col-12-small">
-									<input type="checkbox" id="demo-human" name="demo-human" checked>
-									<label for="demo-human">Not a robot</label>
-								</div>
-								<div class="col-12">
-									<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-								</div>
-								<div class="col-12">
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</div>
-							</div>
-						</form>
-					</section>
-
-					<section>
-						<h4>Image</h4>
-						<h5>Fit</h5>
-						<div class="box alt">
-							<div class="row gtr-uniform gtr-50">
-								<div class="col-12"><span class="image fit"><img src="images/pic06.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic04.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-								<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-							</div>
-						</div>
-						<h5>Left &amp; Right</h5>
-						<p><span class="image left"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						<p><span class="image right"><img src="images/pic05.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-					</section>
-
-				</div>
-			</section>
-		-->
-
-		<!-- Footer -->
-			<section id="footer">
-				<ul class="icons">
-					<li><a href="mailto: atomar19@gwu.edu" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
-					<li><a href="tel:202-908-9620" class="icon solid alt fa-phone"><span class="label">Phone</span></a></li>
-					<li><a href="https://github.com/anweshatomar" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-					<li><a href="https://www.linkedin.com/in/anwesha-tomar/" class="icon brands alt fa-linkedin"><span class="label">Email</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Anwesha Tomar</li>
-				</ul>
-			</section>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
