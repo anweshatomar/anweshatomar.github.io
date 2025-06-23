@@ -3,274 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anwesha Tomar - Data & Analytics Engineer Portfolio</title>
+    <title>Anwesha Tomar - Data & Analytics Engineer</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Inter Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Google Font: Inter - A clean, modern sans-serif font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
+        /* Base Body Styles */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f0f8ff; /* Lightest blue for background */
-            color: #2c3e50; /* Darker blue for primary text */
+            background-color: #FDF5F6; /* Very light, soft pink for body background */
+            color: #2d3748; /* Dark text for contrast */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+            display: flex;
+            flex-direction: column;
         }
-        .navbar-bg {
-            background-color: #ffffff; /* White navbar for crispness */
-            border-bottom: 1px solid #e0e7ff; /* Subtle bottom border */
+        /* Custom Container Width for overall page content */
+        .container-fluid-custom {
+            max-width: 1440px; /* Slightly wider max-width for content spread */
+            margin-left: auto;
+            margin-right: auto;
         }
-        .hero-section {
-            background-color: #e0f2fe; /* A very light blue for the hero section */
-            color: #1a365d; /* Dark blue for hero text */
+
+        /* Hero Section Background & Rounded Corners */
+        .hero-background {
+            background-color: #FCEBEB; /* Light, soft peach/pink based on PDF */
         }
-        .section-title {
-            color: #2b6cb0; /* Professional blue for titles */
+        .rounded-3xl-custom {
+            border-radius: 2rem; /* More pronounced rounded corners, matching PDF */
         }
-        .btn-primary {
-            background-color: #3182ce; /* Medium blue for buttons */
+
+        /* Accent Color: Deep Charcoal Gray for professionalism and contrast */
+        .text-accent {
+            color: #444444; /* Dark charcoal for titles and primary accents */
+        }
+
+        /* Background for Content Blocks (formerly white) */
+        .element-pink-background {
+            background-color: #FCEAEF; /* A slightly more noticeable light pink for elements that were white */
+        }
+
+        /* Primary Button Styling */
+        .button-primary {
+            background-color: #444444; /* Dark charcoal for button background */
             color: white;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* Fully rounded/pill shape */
+            font-weight: 600;
             transition: background-color 0.3s ease, transform 0.3s ease;
         }
-        .btn-primary:hover {
-            background-color: #2b6cb0; /* Darker blue on hover */
-            transform: translateY(-2px); /* Slight lift effect */
+        .button-primary:hover {
+            background-color: #222222; /* Even darker charcoal on hover */
+            transform: scale(1.05);
         }
-        .card-bg {
-            background-color: #ffffff; /* White background for cards */
-            border: 1px solid #e0e7ff; /* Light blue border */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+
+        /* Social Link Styling (in Contact block) */
+        .social-link {
+            display: block; /* Make them stack vertically */
+            padding: 0.2rem 0; /* Add some vertical spacing */
+            color: #2d3748; /* Dark text color */
+            font-weight: 500; /* Medium weight */
+            transition: color 0.3s ease;
         }
-        .social-icon {
-            filter: grayscale(100%);
-            transition: filter 0.3s ease, transform 0.3s ease;
+        .social-link:hover {
+            color: #444444; /* Dark charcoal on hover */
         }
-        .social-icon:hover {
-            filter: grayscale(0%);
-            transform: scale(1.1);
+
+        /* Navbar Link Hover Effect */
+        .nav-link-hover:hover {
+            color: #444444; /* Dark charcoal on hover */
         }
-        .footer-bg {
-            background-color: #2b6cb0; /* Dark blue footer */
+
+        /* Profile Image Styling within Grid */
+        .profile-img {
+            object-fit: cover; /* Cover the container while maintaining aspect ratio */
+            width: 100%; /* Ensure image fills its grid cell */
+            height: 100%; /* Ensure image fills its grid cell */
+            display: block; /* Remove extra space below image */
+        }
+
+        /* --- Custom CSS Grid Layout for Main Content Area --- */
+        .main-content-grid-container {
+            display: grid;
+            /* Define 3 columns for desktop: Left block, Profile Pic, Right blocks */
+            /* Using fr units for flexible sizing relative to each other */
+            grid-template-columns: minmax(280px, 1.2fr) minmax(250px, 1fr) minmax(280px, 1fr);
+            grid-template-rows: auto auto; /* Two rows for content areas */
+            gap: 1.5rem; /* Gap between grid items */
+            padding: 2rem; /* Padding around the entire grid */
+            margin: 0 auto; /* Center the grid container horizontally */
+            max-width: 1200px; /* Limit max width for the grid itself */
+            box-sizing: border-box; /* Include padding in element's total width and height */
+            height: fit-content; /* Adjust height to fit content */
+        }
+
+        /* Define Grid Areas for Desktop Layout (medium screens and up) */
+        @media (min-width: 768px) {
+            .main-content-grid-container {
+                /* Visual representation of the layout:
+                   "hero-text     profile-pic     projects-list"
+                   "about-text    profile-pic     contact-block"
+                */
+                grid-template-areas:
+                    "hero-text profile-pic projects-list"
+                    "about-text profile-pic contact-block";
+                height: 700px; /* Fixed height for desktop to maintain alignment like screenshot */
+            }
+            .grid-area-hero-text { grid-area: hero-text; }
+            .grid-area-profile-pic { grid-area: profile-pic; }
+            .grid-area-projects-list { grid-area: projects-list; }
+            .grid-area-about-text { grid-area: about-text; }
+            .grid-area-contact-block { grid-area: contact-block; }
+        }
+
+        /* For Mobile and Small Tablets: Stack vertically */
+        @media (max-width: 767px) {
+            .main-content-grid-container {
+                grid-template-columns: 1fr; /* Single column */
+                grid-template-rows: auto; /* Auto rows for stacking */
+                grid-template-areas: unset; /* Remove named areas for stacking on mobile */
+                height: auto; /* Allow height to adjust dynamically */
+            }
+            /* Explicitly define order for mobile stacking to ensure logical flow */
+            .grid-area-hero-text { order: 1; }
+            .grid-area-profile-pic { order: 2; }
+            .grid-area-projects-list { order: 3; }
+            .grid-area-about-text { order: 4; }
+            .grid-area-contact-block { order: 5; }
+        }
+
+        /* Styling for all content blocks within the grid */
+        .grid-block {
+            background-color: #FCEAEF; /* Consistent light pink background */
+            padding: 2rem;
+            border-radius: 2rem; /* Rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            position: relative; /* For absolute positioning of internal elements like abstract shapes */
+            overflow: hidden; /* Hide anything spilling out of rounded corners */
+        }
+        /* Flexbox utilities to ensure content aligns within blocks for screenshot replication */
+        .grid-block.flex-col {
+            display: flex;
+            flex-direction: column;
+        }
+        .grid-block.justify-between {
+            justify-content: space-between;
+        }
+        .grid-block.justify-center {
+            justify-content: center;
+        }
+        .grid-block.items-start {
+            align-items: flex-start;
+        }
+        .grid-block.text-center {
+            text-align: center;
+        }
+
+        /* Abstract images within specific blocks (blur, opacity, positioning mimic PDF) */
+        .abstract-flower {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            opacity: 0.4;
+            width: 4rem;
+            height: 4rem;
+            border-radius: 50%; /* Circular shape */
+            background-color: #FAD7D7; /* Soft pink */
+            filter: blur(2px);
+            z-index: 0; /* Behind text */
+        }
+        .abstract-cloud {
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0.5;
+            width: 8rem;
+            height: 8rem;
+            border-radius: 50%; /* Cloud-like blob */
+            background-color: #FBE7D7; /* Slightly different soft pink */
+            filter: blur(5px);
+            transform: translate(20%, -20%); /* Partially outside top-right */
+            z-index: 0; /* Behind text */
+        }
+
+        /* Specific styles for the "Projects" list items */
+        .project-list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0dada; /* Light pink separator */
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 500; /* font-medium */
+            color: #2d3748;
+        }
+        .project-list-item:last-child {
+            border-bottom: none; /* No border for the last item */
+        }
+        .project-arrow-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            fill: #444444; /* Charcoal color for arrow */
+        }
+
+        /* Specific styles for Contact block text and links */
+        .contact-title-small {
+            font-size: 1.125rem; /* text-lg */
+            color: #6B7280; /* Gray-500 */
+            text-align: left; /* Aligned left as in screenshot within its block */
+            margin-bottom: 0.5rem;
+        }
+        .contact-main-text {
+            font-size: 3rem; /* text-5xl */
+            font-weight: 800; /* font-extrabold */
+            color: #444444; /* Accent color */
+            text-align: center; /* Centered within its specific area */
+            line-height: 1; /* Tight line height */
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+        .contact-social-links {
+            position: absolute; /* Position relative to its parent grid block */
+            bottom: 2rem;
+            right: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Align social links to the right */
+            /* Ensure text is dark and matches other text for clarity */
+            color: #2d3748;
         }
     </style>
 </head>
-<body class="antialiased">
+<body class="flex flex-col min-h-screen">
 
-    <!-- Navbar -->
-    <nav class="navbar-bg p-4 shadow-sm rounded-b-lg">
-        <div class="container mx-auto flex justify-between items-center">
-            <div class="text-2xl font-bold text-gray-800">ANWESHA TOMAR</div>
-            <div class="space-x-6">
-                <a href="#projects" class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">PROJECTS</a>
-                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">ABOUT</a>
-                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors duration-200">CONTACT</a>
+    <!-- Navbar - Integrated with hero background, subtle shadow -->
+    <nav class="hero-background w-full p-4 md:px-8 relative z-20 shadow-sm">
+        <div class="container-fluid-custom mx-auto flex justify-between items-center">
+            <div class="text-3xl md:text-4xl font-extrabold text-gray-800">ANWESHA TOMAR</div>
+            <div class="space-x-6 md:space-x-10 text-lg md:text-xl font-medium">
+                <a href="#projects" class="text-gray-700 nav-link-hover transition-colors duration-200">PROJECTS</a>
+                <a href="#about" class="text-gray-700 nav-link-hover transition-colors duration-200">ABOUT</a>
+                <a href="#contact" class="text-gray-700 nav-link-hover transition-colors duration-200">CONTACT</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero-section py-24 px-4 rounded-b-3xl shadow-lg">
-        <div class="container mx-auto flex flex-col md:flex-row items-center justify-center text-center md:text-left">
-            <!-- Profile Image (Placeholder for now) -->
-            <div class="md:w-1/3 flex justify-center md:justify-end mb-10 md:mb-0 md:mr-16">
-                <img src="https://placehold.co/300x300/a0aec0/ffffff?text=Your+Photo" alt="Anwesha Tomar" class="rounded-full shadow-xl w-52 h-52 md:w-64 md:h-64 object-cover border-4 border-white">
-            </div>
-            <!-- Text Content -->
-            <div class="md:w-2/3">
-                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">
-                    Data & Analytics Engineer <br> Driving Business Insights
+    <!-- Main Content Area - Replicated Screenshot Layout -->
+    <!-- The hero-background color is applied to the main content area itself,
+         as the screenshot shows the grid blocks sitting directly on this background. -->
+    <main class="flex-grow py-8 px-4 md:px-8 hero-background">
+        <div class="main-content-grid-container">
+
+            <!-- Top Left Block: "Artist Redefining..." Text + Button -->
+            <div class="grid-block grid-area-hero-text flex flex-col justify-between">
+                <div class="abstract-flower"></div> <!-- Abstract flower inside this block -->
+                <h1 class="text-3xl md:text-5xl font-extrabold leading-tight text-gray-900 z-10">
+                    Data & Analytics Engineer<br> Redefining Business Insights
                 </h1>
-                <p class="text-lg md:text-xl text-blue-800 mb-8 max-w-2xl mx-auto md:mx-0">
-                    Anwesha Tomar is an innovative Data & Analytics Engineer renowned for blending cutting-edge data solutions with strategic business insights. Based in Washington D.C., she crafts scalable data pipelines and analytical models accessible globally.
-                </p>
-                <a href="#contact" class="btn-primary py-3 px-8 rounded-full text-lg font-semibold shadow-md">
-                    Connect with Me
-                </a>
+                <a href="#contact" class="button-primary self-start mt-8 z-10">Contact me</a>
             </div>
-        </div>
-    </header>
 
-    <!-- Projects Section -->
-    <section id="projects" class="py-20 px-4 bg-f0f8ff rounded-xl m-8">
-        <div class="container mx-auto">
-            <h2 class="text-5xl font-extrabold text-center section-title mb-16">PROJECTS</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-                <!-- Project Card 1: Mortgage & Debt Analysis -->
-                <div class="card-bg rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/e0f2fe/2b6cb0?text=Mortgage+Analysis" alt="Mortgage & Debt Analysis" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Mortgage & Debt Analysis</h3>
-                        <p class="text-gray-700 text-base mb-4">
-                            Built an ensemble model using KNN, SVM, and Logistic Regression to analyze mortgage-related debt impact. Preprocessed data through outlier removal, imputation, and feature selection to improve model accuracy. (Python)
-                        </p>
-                        <a href="#" class="btn-primary py-2 px-5 rounded-full text-sm font-semibold inline-block">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Project Card 2: Indian Stock Market Analysis -->
-                <div class="card-bg rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/e0f2fe/2b6cb0?text=Stock+Market+Analysis" alt="Indian Stock Market Analysis" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Indian Stock Market Analysis</h3>
-                        <p class="text-gray-700 text-base mb-4">
-                            Developed an SVM-based application to analyze Indian stock trends across five companies in three sectors. Cleaned and merged multi-sector datasets and built a PyQt GUI to deliver real-time, user-friendly insights. (Python)
-                        </p>
-                        <a href="#" class="btn-primary py-2 px-5 rounded-full text-sm font-semibold inline-block">View Details</a>
-                    </div>
-                </div>
-
-                <!-- Project Card 3: Crowd Counting -->
-                <div class="card-bg rounded-xl overflow-hidden transition-transform transform hover:scale-105 duration-300">
-                    <img src="https://placehold.co/600x400/e0f2fe/2b6cb0?text=Crowd+Counting" alt="Crowd Counting" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-3">Crowd Counting</h3>
-                        <p class="text-gray-700 text-base mb-4">
-                            Preprocessed over 2,000 images and created a TensorFlow pipeline for CNN model training. Implemented a custom CNN and a modified ResNet-50 model, leveraging Google Cloud for deployment. (Python)
-                        </p>
-                        <a href="#" class="btn-primary py-2 px-5 rounded-full text-sm font-semibold inline-block">View Details</a>
-                    </div>
-                </div>
+            <!-- Middle Block: Profile Picture -->
+            <div class="grid-area-profile-pic flex justify-center items-center overflow-hidden rounded-3xl-custom shadow-xl">
+                <!-- User's uploaded image inserted here -->
+                <img src="WhatsApp Image 2024-09-22 at 11.46.20 AM.jpg" alt="Anwesha Tomar" class="profile-img rounded-3xl-custom">
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 px-4 bg-white rounded-xl shadow-lg m-8">
-        <div class="container mx-auto">
-            <h2 class="text-5xl font-extrabold text-center section-title mb-16">ABOUT ANWESHA</h2>
-            <div class="max-w-5xl mx-auto text-lg text-gray-700 leading-relaxed space-y-8">
-                <p>
-                    Anwesha Tomar is a seasoned Data Engineer with over 3 years of experience in designing scalable data platforms and high-performance pipelines across diverse environments including healthcare, media, and fintech. She holds a Master of Science in Data Science from The George Washington University and a Bachelor of Engineering in Computer Science & Engineering from Savitribai Phule Pune University.
-                </p>
-                <p>
-                    Her expertise lies in transforming complex data challenges into actionable solutions, with a strong foundation in Python, SQL, and C++. Anwesha is adept at leveraging modern data warehousing tools like Snowflake and BigQuery, and cloud platforms such as GCP and AWS to build robust reporting systems, advanced data models, and sophisticated machine learning infrastructure.
-                </p>
-                <p>
-                    Passionate about applying quantitative and engineering expertise, Anwesha consistently drives initiatives that support long-term investment research, portfolio analytics, and data integrity. She is recognized for her ability to collaborate effectively with cross-functional teams, manage client timelines, and deliver impactful data-driven strategies.
-                </p>
-
-                <h3 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Work Experience</h3>
-                <div class="space-y-8">
-                    <div class="border-b border-gray-200 pb-6 last:border-b-0">
-                        <h4 class="text-2xl font-semibold text-gray-900">Data Analyst - Healthtech Solutions, Remote</h4>
-                        <p class="text-blue-700 text-base mb-2">March 2024 - Present (1 year 4 months)</p>
-                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-                            <li>Built Excel-based financial models to aggregate and analyze fund allocation and spending patterns, enabling stakeholders to quantify expenditure efficiency and assess overall financial impact.</li>
-                            <li>Developed SQL procedures and Python pipelines to model behavioral health metrics, enabling hospitals to quantify and monitor 10+ health measures for operational and clinical decision-making.</li>
-                            <li>Led project communications by managing client timelines, coordinating with external stakeholders, and delivering monthly reports to drive accountability and project success.</li>
-                        </ul>
-                    </div>
-                    <div class="border-b border-gray-200 pb-6 last:border-b-0">
-                        <h4 class="text-2xl font-semibold text-gray-900">Data Engineer - Insider Intelligence, New York, NY</h4>
-                        <p class="text-blue-700 text-base mb-2">December 2022 - February 2024 (1 year 3 months)</p>
-                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-                            <li>Built and optimized SQL-based data pipelines for ads reporting, ensuring atomicity, data quality, and performance to support accurate, real-time reporting for the ads and sales teams.</li>
-                            <li>Created a multi-touch funnel to analyze leads and opportunities and created attribution models to better understand areas of growth for the business.</li>
-                            <li>Collaborated with cross-functional teams to rebuild and replace legacy dashboards, increased company-wide dashboard usage by 30% in Looker.</li>
-                        </ul>
-                    </div>
-                     <div class="border-b border-gray-200 pb-6 last:border-b-0">
-                        <h4 class="text-2xl font-semibold text-gray-900">Analytics Engineer - Quartz Media Inc, New York, NY</h4>
-                        <p class="text-blue-700 text-base mb-2">August 2021 - December 2022 (1 year 5 months)</p>
-                        <ul class="list-disc list-inside mt-2 space-y-1 text-gray-700">
-                            <li>Responsible for the dbt instance and ELT pipelines, overseeing $200+ SQL models.</li>
-                            <li>Built company-wide KPIs to give the executive team insight into the health of the business.</li>
-                            <li>Consolidated user demographic data and user activity journey data from 5+ sources to give a holistic view of active users.</li>
-                            <li>Developed user retention strategies and created subscription reports to monitor churn and Monthly Recurring Revenue (MRR) while providing recommendations for reducing churn.</li>
-                            <li>Spearheaded the data governance initiative to improve data quality and establish company-wide best practices.</li>
-                            <li>Charted the path to build the machine learning architecture, integrated MLFlow into existing data tech stack to facilitate data science projects.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Technical Skills</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-gray-700">
-                    <div>
-                        <h4 class="text-xl font-semibold text-gray-900">Languages:</h4>
-                        <p>SQL, Python, R, Java, C, C++</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-gray-900">Top Skills:</h4>
-                        <p>Pandas (Software), Google Cloud Platform (GCP), Microsoft Azure</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-gray-900">Data Warehouse & Tools:</h4>
-                        <p>dbt, Snowflake, BigQuery, GCP, AWS, Looker (BI tool), MongoDB, Agile tools</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-gray-900">R & Python Packages:</h4>
-                        <p>Numpy, Sci Kit Learn, TensorFlow, PyTorch, NLTK, Spacy, Matplotlib, ggplot</p>
-                    </div>
-                    <div>
-                        <h4 class="text-xl font-semibold text-gray-900">DS Applications & Tools:</h4>
-                        <p>Data Preprocessing, Supervised & Unsupervised Learning, NLP, MLFlow</p>
-                    </div>
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Education</h3>
-                <div class="space-y-6">
-                    <div>
-                        <h4 class="text-2xl font-semibold text-gray-900">Master of Science - Data Science</h4>
-                        <p class="text-blue-700 text-base mb-1">The George Washington University, Washington, DC</p>
-                        <p class="text-gray-700">Relevant Coursework: Machine Learning, NLP, High-Performance Computing, Deep Learning, Time Series Applied Research and Cloud Computing</p>
-                    </div>
-                    <div>
-                        <h4 class="text-2xl font-semibold text-gray-900">Bachelor of Engineering - Computer Science & Engineering</h4>
-                        <p class="text-blue-700 text-base mb-1">Savitribai Phule Pune University, Pune, Maharashtra, India</p>
-                        <p class="text-gray-700">Relevant Coursework: AI and Robotics, Cloud Computing, Distributed Systems, Probability and Statistics</p>
-                    </div>
-                </div>
-
-                <h3 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Publications</h3>
-                <ul class="list-disc list-inside space-y-2 text-gray-700">
-                    <li>Study of SVM Based Indian Stock Market Prediction Methods</li>
-                    <li>A Comprehensive Study of Cryptocurrency Systems</li>
-                    <li>Analysis of real-time particulate matter (PM2.5) concentrations in Washington, DC, using generalized additive models (GAMs)</li>
+            <!-- Top Right Block: Projects List -->
+            <div class="grid-block grid-area-projects-list flex flex-col justify-between items-start pt-8 pb-4 pl-8 pr-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-4 tracking-wider">PROJECTS</h2>
+                <ul class="w-full space-y-2">
+                    <li class="project-list-item">Musea <svg class="project-arrow-icon" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></li>
+                    <li class="project-list-item">Elara <svg class="project-arrow-icon" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></li>
+                    <li class="project-list-item">Verve <svg class="project-arrow-icon" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></li>
+                    <li class="project-list-item">Zephyr <svg class="project-arrow-icon" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg></li>
                 </ul>
+                <div class="abstract-cloud"></div> <!-- Abstract cloud inside this block -->
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 px-4 bg-e0f2fe rounded-xl shadow-lg m-8">
-        <div class="container mx-auto text-center">
-            <h2 class="text-5xl font-extrabold section-title mb-12">Have some questions?</h2>
-            <p class="text-lg text-blue-800 mb-8 max-w-2xl mx-auto">
-                Feel free to reach out to me for collaborations, inquiries, or just to connect! I'm always open to discussing new opportunities in data science and engineering.
-            </p>
-            <div class="flex flex-col items-center space-y-8">
-                <a href="mailto:anwesha.tomar@gmail.com" class="btn-primary py-3 px-8 rounded-full text-lg font-semibold shadow-md">
-                    Email Me
-                </a>
-                <div class="flex space-x-8">
-                    <a href="https://www.linkedin.com/in/anwesha-tomar" target="_blank" class="social-icon">
-                        <!-- LinkedIn SVG Icon -->
-                        <svg class="w-10 h-10 text-blue-700" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                        </svg>
-                    </a>
-                    <a href="https://github.com/anweshatomar" target="_blank" class="social-icon">
-                        <!-- GitHub SVG Icon -->
-                        <svg class="w-10 h-10 text-gray-800" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.475.087.646-.207.646-.46V20.35c-2.784.616-3.368-1.353-3.368-1.353-.455-1.157-1.11-1.465-1.11-1.465-.909-.62.067-.608.067-.608 1.007.07 1.532 1.03 1.532 1.03.89 1.528 2.338 1.087 2.906.833.091-.646.353-1.087.646-1.338-2.227-.253-4.566-1.12-4.566-4.962 0-1.096.39-1.996 1.029-2.7-.103-.255-.447-1.277.098-2.673 0 0 .84-.27 2.75 1.025.797-.22 1.649-.333 2.5-.337.85.004 1.703.117 2.5.337 1.908-1.295 2.748-1.025 2.748-1.025.546 1.396.202 2.418.1 2.673.64.704 1.028 1.604 1.028 2.7 0 3.85-2.345 4.704-4.575 4.954.359.309.678.919.678 1.852V21.56c0 .253.17.547.65.459C20.14 20.202 23 16.447 23 12.017 23 6.484 18.522 2 12 2z" clip-rule="evenodd"/>
-                        </svg>
-                    </a>
-                    <a href="https://anweshatomar.github.io/" target="_blank" class="social-icon">
-                        <!-- Personal Website/Portfolio Icon (placeholder SVG) -->
-                        <svg class="w-10 h-10 text-green-700" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-6h-2v6zm0-8h2V7h-2v2z"/>
-                        </svg>
-                    </a>
-                </div>
-                <p class="text-gray-600 text-sm mt-4">
-                    Phone: 202-908-9620 | Email: anwesha.tomar@gmail.com
+            <!-- Bottom Left Block: About Text -->
+            <div class="grid-block grid-area-about-text flex flex-col justify-center items-start pt-8 pb-8 px-8">
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    Anwesha Tomar is an innovative Data & Analytics Engineer, renowned for blending cutting-edge technology with creative expression. Based in New York City, she crafts unique digital art experiences accessible globally.
                 </p>
             </div>
+
+            <!-- Bottom Right Block: Contact Me -->
+            <div class="grid-block grid-area-contact-block text-center relative pt-8 pb-8 px-8">
+                <p class="contact-title-small">Have some question?</p>
+                <p class="contact-main-text">Contact me</p>
+                <div class="contact-social-links">
+                    <a href="https://www.instagram.com/your_instagram" target="_blank" class="social-link">INSTAGRAM</a>
+                    <a href="https://twitter.com/your_twitter" target="_blank" class="social-link">TWITTER</a>
+                    <a href="https://www.linkedin.com/in/anwesha-tomar" target="_blank" class="social-link">LINKEDIN</a>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer-bg text-white p-6 text-center rounded-t-lg mt-8 shadow-inner">
-        <div class="container mx-auto">
+    <footer class="bg-gray-800 text-white p-6 text-center rounded-t-3xl-custom mt-8">
+        <div class="container-fluid-custom mx-auto">
             <p>&copy; 2025 Anwesha Tomar. All rights reserved.</p>
         </div>
     </footer>
